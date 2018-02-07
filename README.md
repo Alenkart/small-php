@@ -64,7 +64,7 @@ $app->get('/api/template', function($params) {
 });
 ```
 
-## Query Example
+## Database
 
 ```
 include "server/core/View.php";
