@@ -47,6 +47,20 @@ $app->get('/api/products/{n}/{w}', function($params) {
 
 The template class replaces the tags that are written like this {:tag_name} in the HTML.
 
+//template: server/templates/post.html 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{:title}</title>
+</head>
+<body>
+	<span>{:title}</span>
+</body>
+</html>
+
+```
+
 ```php
 include "server/core/View.php";
 include "server/core/Router.php";
@@ -59,7 +73,7 @@ $app->view->setPath("server/templates");
 
 $app->get('/api/template', function($params) {	
 
-   $this->view->render("/posts.php", [
+   $this->view->render("/posts.html", [
    	'title' => 'Amazing title'
    ]);
    
