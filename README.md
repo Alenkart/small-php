@@ -10,11 +10,11 @@ A PHP micro framework to build APIs
  4) DELETE
  
 ### Parameters
- '/'   Base route
- '{a}' Anything
- '{n}' Only numbers
- '{w}' Only Letters 
- '{b}' Numbers and letters
+- '/'   Base route
+- '{a}' Anything
+- '{n}' Only numbers
+- '{w}' Only Letters 
+- '{b}' Numbers and letters
 
 Example
 
