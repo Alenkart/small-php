@@ -1,5 +1,5 @@
 # small-php
-A PHP micro framework to build APIs
+A PHP micro framework to build APIs. This is for learning purpose only is not mean to be used in production.
 
 ## Router
 
