@@ -67,6 +67,8 @@ $app->get('/api/template', function($params) {
 
 ## Database
 
+Database config file is located in the following path: server/config/database.php
+
 ```
 include "server/core/View.php";
 include "server/core/Router.php";
