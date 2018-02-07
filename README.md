@@ -19,7 +19,7 @@ A PHP micro framework to build APIs. This is for learning purpose only is not me
 
 Example
 
-```
+```php
 include "server/core/Router.php";
 include "server/core/Database.php";
 
@@ -44,9 +44,9 @@ $app->get('/api/products/{n}/{w}', function($params) {
 
 ## View
 
-The template class replaces the tags that are written like this {:<your tag name>} in the HTML.
+The template class replaces the tags that are written like this {:tag_name} in the HTML.
 
-```
+```php
 include "server/core/View.php";
 include "server/core/Router.php";
 
@@ -69,7 +69,7 @@ $app->get('/api/template', function($params) {
 
 Database config file is located in the following path: server/config/database.php
 
-```
+```php
 include "server/core/View.php";
 include "server/core/Router.php";
 include "server/core/Database.php";
