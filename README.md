@@ -1,6 +1,6 @@
 # small-php
-![alt text](client/assets/img/logo.png)
-A PHP micro framework to build APIs. This is for learning purpose only is not mean to be used in production.
+![alt text](client/assets/img/logo.png) 
+  A PHP micro framework to build APIs. This is for learning purpose only is not mean to be used in production.
 
 ## Router
 
