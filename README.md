@@ -20,11 +20,32 @@ Example
 
 ```
 include "server/core/Router.php";
+include "server/core/Database.php";
 
 $app = new Router(); 
+$app->db = new Database();
 
-$app->get('/api/{a}', function($params) {	
-   return 'Hello world';	
+$app->get('/api', function($params) {	
+   return 'Test Api';	
+});
+
+// MySql Query
+$app->get('/api/products/{n}', function($params) {
+
+	$this->db->connect();
+	
+	$query = '
+		SELECT * 
+		FROM products 
+		WHERE id = :id';
+
+	$stmt = $this->db->conn->prepare($query);
+	$stmt->bindParam(':id', $params[1]);
+	$stmt->execute();
+
+	$result = $stmt->fetchAll();
+
+	return $this->json($result);
 });
 
 ```
@@ -34,13 +55,11 @@ $app->get('/api/{a}', function($params) {
 ```
 include "server/core/View.php";
 include "server/core/Router.php";
-include "server/core/Session.php";
 include "server/core/Database.php";
 
 $app = new Router(); 
 $app->view = new View();
 $app->db = new Database();
-$app->session = new Session();
 
 $app->view->setPath("server/templates");
 
