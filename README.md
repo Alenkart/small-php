@@ -17,7 +17,7 @@ A PHP micro framework to build APIs. This is for learning purpose only is not me
 - '{w}' Only Letters 
 - '{b}' Numbers and letters
 
-Example
+Examples
 
 ```php
 include "server/core/Router.php";
@@ -44,10 +44,11 @@ $app->get('/api/products/{n}/{w}', function($params) {
 ```
 
 ## View
-
 The template class replaces the tags that are written like this {:tag_name} in the HTML.
 
-//template: server/templates/post.html 
+### Template 
+Path: server/templates/post.html 
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -60,6 +61,8 @@ The template class replaces the tags that are written like this {:tag_name} in t
 </html>
 
 ```
+
+### index.php
 
 ```php
 include "server/core/View.php";
@@ -81,7 +84,6 @@ $app->get('/api/template', function($params) {
 ```
 
 ## Database
-
 Database config file is located in the following path: server/config/database.php
 
 ```php
