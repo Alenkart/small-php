@@ -29,23 +29,14 @@ $app->get('/api', function($params) {
    return 'Test Api';	
 });
 
-// MySql Query
-$app->get('/api/products/{n}', function($params) {
-
-	$this->db->connect();
-	
-	$query = '
-		SELECT * 
-		FROM products 
-		WHERE id = :id';
-
-	$stmt = $this->db->conn->prepare($query);
-	$stmt->bindParam(':id', $params[1]);
-	$stmt->execute();
-
-	$result = $stmt->fetchAll();
-
-	return $this->json($result);
+// Getting parameters
+$app->get('/api/products/{n}/{w}', function($params) {
+   
+   return $this->json([
+   	'numbers' => $params[1],
+	'letters' => $params[2],
+   ]);
+   
 });
 
 ```
