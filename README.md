@@ -41,6 +41,29 @@ $app->get('/api/products/{n}/{w}', function($params) {
 
 ```
 
+## View
+
+The template class replaces the tags that are written like this {:<your tag name>} in the HTML.
+
+```
+include "server/core/View.php";
+include "server/core/Router.php";
+
+$app = new Router(); 
+$app->view = new View();
+
+//Setting the template path
+$app->view->setPath("server/templates");
+
+$app->get('/api/template', function($params) {	
+
+   $this->view->render("/posts.php", [
+   	'title' => 'Amazing title'
+   ]);
+   
+});
+```
+
 ## Query Example
 
 ```
