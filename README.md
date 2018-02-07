@@ -46,7 +46,7 @@ $app->get('/api/products/{n}/{w}', function($params) {
 ## View
 The template class replaces the tags that are written like this {:tag_name} in the HTML.
 
-### Template 
+### post.html
 Path: server/templates/post.html 
 
 ```html
