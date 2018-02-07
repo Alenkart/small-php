@@ -34,6 +34,7 @@ $app->get('/api', function($params) {
 $app->get('/api/products/{n}/{w}', function($params) {
    
    return $this->json([
+   	'path' => $params[0],
    	'numbers' => $params[1],
 	'letters' => $params[2],
    ]);
