@@ -84,9 +84,7 @@ $app->get('/api/products', function($params) {
 
 	$this->db->connect();
 	
-	$query = '
-		SELECT * 
-		FROM products';
+	$query = 'SELECT * FROM products';
 
 	$stmt = $this->db->conn->prepare($query);
 	$stmt->execute();
